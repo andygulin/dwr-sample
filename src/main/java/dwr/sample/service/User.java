@@ -19,6 +19,14 @@ public class User {
     @RemoteProperty
     private Date createAt;
 
+    public User(Integer id, String name, Integer age, String address, Date createAt) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.address = address;
+        this.createAt = createAt;
+    }
+
     public Integer getId() {
         return id;
     }

@@ -17,33 +17,16 @@ public class UserService {
 
     @RemoteMethod
     public User user() {
-        User user = new User();
-        user.setId(1);
-        user.setName("aaa");
-        user.setAge(11);
-        user.setAddress("shanghai");
-        user.setCreateAt(new Date());
-        return user;
+        return new User(1, "小明", 11, "上海", new Date());
     }
 
     @RemoteMethod
     public List<User> list() {
         List<User> list = new ArrayList<>();
-        User user = new User();
-        user.setId(1);
-        user.setName("aaa");
-        user.setAge(11);
-        user.setAddress("shanghai");
-        user.setCreateAt(new Date());
-        list.add(user);
-
-        user = new User();
-        user.setId(2);
-        user.setName("bbb");
-        user.setAge(22);
-        user.setAddress("beijing");
-        user.setCreateAt(new Date());
-        list.add(user);
+        list.add(new User(1, "小明", 11, "上海", new Date()));
+        list.add(new User(2, "小红", 12, "北京", new Date()));
+        list.add(new User(3, "小兰", 13, "广州", new Date()));
+        list.add(new User(4, "小镇", 14, "香港", new Date()));
         return list;
     }
 }
